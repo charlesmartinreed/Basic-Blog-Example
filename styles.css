@@ -1,0 +1,19 @@
+/* EXAMPLE OF A MEDIA QUERY */
+/* WHEN THIS CONDITION BECOMES TRUE, THE ATTRIBUTE WILL BE CHANGED. */
+/* @media (max-width: 8.5in) {
+	body {
+		background-color: red;
+	}
+} */
+
+article {
+	display: grid;
+	grid-template-columns: 1fr minmax(0, 8.5in) 1fr;
+
+	height: 100vh;
+}
+
+article * {
+	/* any children of the article column should fall between 2 and 3 col */
+	grid-column: 2/3;
+}
