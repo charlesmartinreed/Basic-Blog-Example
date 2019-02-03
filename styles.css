@@ -3,17 +3,24 @@
 /* @media (max-width: 8.5in) {
 	body {
 		background-color: red;
-	}
+	}·
 } */
 
 article {
 	display: grid;
-	grid-template-columns: 1fr minmax(0, 8.5in) 1fr;
+	grid-template-columns: 1fr 1in [start] 7.5in [end] 1in 1fr;
 
 	height: 100vh;
+
+	padding: 0.5in 0;
 }
 
 article * {
-	/* any children of the article column should fall between 2 and 3 col */
-	grid-column: 2/3;
+	grid-column: start/end;
+}
+
+@media (max-width: 8.5in) {
+	article {
+		grid-template-columns: 1fr 5% [start] 90% [end] 5% 1fr;
+	 }
 }
