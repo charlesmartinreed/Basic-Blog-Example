@@ -6,6 +6,8 @@
 	}·
 } */
 
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+
 article {
 	display: grid;
 	grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 1in 1fr;
@@ -20,9 +22,44 @@ article * {
 }
 
 @media (max-width: 8.5in) {
+	:root {
+		font-size: 18px;
+	}
+
 	article {
 		grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
 	 }
+}
+
+@media (max-width: 5in) {
+	:root {
+		font-size: 16px;
+	}
+}
+
+h1 {
+	font:700 2.0rem/1.2 "Oswald";
+}
+
+h2 {
+	font:400 1.5rem/1.2 "Oswald";
+}
+
+time {
+	font:700 1.0rem/1.2 "Oswald";
+}
+
+h3 {
+	font:700 1.0rem/1.2 "Oswald";
+}
+
+p {
+	font:400 1.0rem/1.8 "Oswald";
+}
+
+a {
+	/* inset places the box shadow inside the elemtent, 0 for X, -0.25em for Y - em because shadow should be proportional to the font size */
+	box-shadow: inset 0 -0.25em black;
 }
 
 h2, p:not(:last-child) {

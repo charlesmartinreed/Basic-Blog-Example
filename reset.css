@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald');
-
 /* another way of saying html, as that's our root */
 :root { font: 20px/1.2 "Oswald", sans-serif; }
 
