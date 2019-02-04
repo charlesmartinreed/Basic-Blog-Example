@@ -12,9 +12,10 @@ article {
 	display: grid;
 	grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 1in 1fr;
 
-	height: 100vh;
-
 	padding: 0.5in 0;
+
+	/* GRADIENT EFFECT FOR TOP - rem means gradient resizes in turn with page. */
+	background: linear-gradient(white, hsl(55, 100%, 95%), white 6.5rem);
 }
 
 article * {
