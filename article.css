@@ -1,0 +1,45 @@
+/* EXAMPLE OF A MEDIA QUERY */
+/* WHEN THIS CONDITION BECOMES TRUE, THE ATTRIBUTE WILL BE CHANGED. */
+/* @media (max-width: 8.5in) {
+	body {
+		background-color: red;
+	}·
+} */
+
+article {
+	display: grid;
+	grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 1in 1fr;
+
+	height: 100vh;
+
+	padding: 0.5in 0;
+}
+
+article * {
+	grid-column: start/end;
+}
+
+@media (max-width: 8.5in) {
+	article {
+		grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
+	 }
+}
+
+/* IMAGES */
+
+img {
+	width: 100%; /* of parent container */
+}
+
+.size-1 {
+	grid-column: 4/5; /* corresponds to a 5in image, start and end in that column*/
+}
+.size-2 {
+	grid-column: 4/5;
+}
+.size-3 {
+	grid-column: 4/5;
+}
+.size-4 {
+	grid-column: 4/5;
+}
